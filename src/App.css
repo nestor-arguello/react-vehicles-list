@@ -1,6 +1,17 @@
 /* @import '~antd/dist/antd.css'; */
 
-.App {
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -32,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
