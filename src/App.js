@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 
-import Button from 'antd/lib/button';
+import { Button } from 'antd';
 
 const App = () => {
   return (
