@@ -20,7 +20,12 @@ const Login = ({
       }}
     >
       <Card
-        style={{ width: 350, height: 510 }}
+        style={{
+          width: 350,
+          height: 510,
+          boxShadow:
+            '0px 2px 8px 0px rgba(0, 0, 0, 0.1)'
+        }}
         cover={
           <img
             alt="example"
