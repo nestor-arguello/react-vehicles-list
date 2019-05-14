@@ -1,22 +1,26 @@
 import React from 'react';
-import { Table, Checkbox, Divider } from 'antd';
-import testData from '../../testData'
+import { Table, Checkbox, Button } from 'antd';
+import testData from '../../testData';
 
-const data = testData.byIds[1].cars
-  .map((car, index) => {
-    const { brand, year, madein, maxspeed, active } = car;
-    return (
-      {
-        key: index,
-        brand,
-        year,
-        madein,
-        maxspeed,
-        active
-      }
-    )
-  })
-console.log(data);
+const data = testData.byIds[1].cars.map(
+  (car, index) => {
+    const {
+      brand,
+      year,
+      madein,
+      maxspeed,
+      active
+    } = car;
+    return {
+      key: index,
+      brand,
+      year,
+      madein,
+      maxspeed,
+      active
+    };
+  }
+);
 
 const columns = [
   {
@@ -40,21 +44,45 @@ const columns = [
     key: 'maxspeed'
   },
   {
-    title: 'Activo',
+    title: 'Estado',
     dataIndex: 'active',
     key: 'active',
-    render: active => <Checkbox checked={active} />
+    render: active => (
+      <>
+        <span>Activo &nbsp;</span>{' '}
+        <Checkbox checked={active} />
+      </>
+    )
+  },
+  {
+    title: 'Acciones',
+    key: 'action',
+    render: record => (
+      <span>
+        {console.log(record)}
+        <Button
+          icon="file-search"
+          style={{ margin: 5 }}
+          type="default"
+        >
+          <span style={{ fontSize: 12 }}>Detalle</span>
+        </Button>
+        <Button
+          icon="delete"
+          style={{ margin: 5 }}
+          type="danger"
+        >
+          <span style={{ fontSize: 12 }}>Eliminar</span>
+        </Button>
+      </span>
+    )
   }
 ];
 
 const CarsTable = ({ ...props }) => {
   return (
     <div>
-      <Table
-        dataSource={data}
-        columns={columns}
-      />
-      ;
+      <Table dataSource={data} columns={columns} />
     </div>
   );
 };
