@@ -1,26 +1,6 @@
 import React from 'react';
 import { Table, Checkbox, Button } from 'antd';
-import testData from '../../testData';
-
-const data = testData.byIds[1].cars.map(
-  (car, index) => {
-    const {
-      brand,
-      year,
-      madein,
-      maxspeed,
-      active
-    } = car;
-    return {
-      key: index,
-      brand,
-      year,
-      madein,
-      maxspeed,
-      active
-    };
-  }
-);
+import { useStateValue } from '../../globalState';
 
 const columns = [
   {
@@ -80,6 +60,27 @@ const columns = [
 ];
 
 const CarsTable = ({ ...props }) => {
+  const [{users}] = useStateValue();
+  const data = users.byIds[1].cars.map(
+    (car, index) => {
+      const {
+        brand,
+        year,
+        madein,
+        maxspeed,
+        active
+      } = car;
+      return {
+        key: index,
+        brand,
+        year,
+        madein,
+        maxspeed,
+        active
+      };
+    }
+  );
+
   return (
     <div>
       <Table dataSource={data} columns={columns} />

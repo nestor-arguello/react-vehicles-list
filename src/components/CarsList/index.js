@@ -4,7 +4,6 @@ import { Card } from 'antd';
 import CarsTable from './CarsTable';
 
 const CarsList = () => {
-  // const
   return (
     <div
       style={{
