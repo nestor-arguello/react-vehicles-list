@@ -42,6 +42,7 @@ const CarsList = () => {
         }
       >
         <CarsTable />
+        {console.log('[CarsList rendered!]')}
       </Card>
     </div>
   );

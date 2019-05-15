@@ -1,5 +1,7 @@
 import React from 'react';
-import { Checkbox, Button } from 'antd';
+import { Checkbox } from 'antd';
+import RemoveBtn from './RemoveBtn';
+import DetailBtn from './DetailBtn';
 
 const columns = [
   {
@@ -38,21 +40,8 @@ const columns = [
     key: 'action',
     render: record => (
       <span>
-        {console.log(record)}
-        <Button
-          icon="file-search"
-          style={{ margin: 5 }}
-          type="default"
-        >
-          <span style={{ fontSize: 12 }}>Detalle</span>
-        </Button>
-        <Button
-          icon="delete"
-          style={{ margin: 5 }}
-          type="danger"
-        >
-          <span style={{ fontSize: 12 }}>Eliminar</span>
-        </Button>
+        <DetailBtn record={record} />
+        <RemoveBtn record={record} />
       </span>
     )
   }
