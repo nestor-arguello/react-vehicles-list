@@ -1,9 +1,9 @@
 const initialState = {
-  showDetail: true,
+  showDetailModal: true,
   actualUserId: '1',
   users: {
     allIds: ['1', '2'],
-    byIds: {
+    byId: {
       '1': {
         id: '1',
         username: 'nes',
@@ -20,7 +20,7 @@ const initialState = {
   },
   cars: {
     allIds: ['1', '2', '3', '4'],
-    byIds: {
+    byId: {
       '1': {
         id: '1',
         userId: '1',

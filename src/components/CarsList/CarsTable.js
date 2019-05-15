@@ -1,43 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Table } from 'antd';
 import { useStateValue } from '../../globalState';
 import columns from './columns';
+import { getCarsColumnsData } from '../../selectors';
 import DetailModal from './DetailModal';
 
 const CarsTable = ({ ...props }) => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [{ cars, actualUserId }] = useStateValue();
-  const carsObjects = cars.byIds;
-
-  const data = Object.keys(carsObjects)
-    .reduce((cars, id) => {
-      if (carsObjects[id].userId === actualUserId) {
-        cars.push(carsObjects[id]);
-      }
-      return cars;
-    }, [])
-    .map(car => {
-      const {
-        id,
-        brand,
-        year,
-        madein,
-        maxspeed,
-        active
-      } = car;
-      return {
-        key: id,
-        brand,
-        year,
-        madein,
-        maxspeed,
-        active
-      };
-    });
+  const [{ cars, actualUserId, showDetailModal }] = useStateValue();
+  const data = getCarsColumnsData(cars.byId, actualUserId);
 
   return (
     <div>
-      <DetailModal show={showDetail} />
+      <DetailModal show={showDetailModal} />
       <Table dataSource={data} columns={columns} />
     </div>
   );

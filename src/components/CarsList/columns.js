@@ -30,8 +30,7 @@ const columns = [
     key: 'active',
     render: active => (
       <>
-        <span>Activo &nbsp;</span>{' '}
-        <Checkbox defaultChecked={active} />
+        <span>Activo &nbsp;</span> <Checkbox defaultChecked={active} />
       </>
     )
   },
