@@ -20,6 +20,30 @@ export const getCarsColumnsData = (carsById, actualUserId) => {
     });
 };
 
-export const getDetailsColumnsData = (cars, id) => {
-
+export const getDetailsColumnsData = (carsById, carId) => {
+  if (carId) {
+    const {
+      id,
+      brand,
+      year,
+      madein,
+      maxspeed,
+      active,
+      description,
+      colors,
+      doors
+    } = carsById[carId];
+    
+    return [{
+      key: id,
+      brand,
+      year,
+      madein,
+      maxspeed,
+      active,
+      description,
+      colors,
+      doors
+    }];
+  }
 };

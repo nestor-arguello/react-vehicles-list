@@ -3,7 +3,7 @@ import { Checkbox } from 'antd';
 import RemoveBtn from './RemoveBtn';
 import DetailBtn from './DetailBtn';
 
-const columns = [
+const listColumns = [
   {
     title: 'Marca',
     dataIndex: 'brand',
@@ -46,4 +46,4 @@ const columns = [
   }
 ];
 
-export default columns;
+export default listColumns;
