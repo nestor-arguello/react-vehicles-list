@@ -38,7 +38,7 @@ const columns = [
   {
     title: 'Acciones',
     key: 'action',
-    render: record => (
+    render: (text, record) => (
       <span>
         <DetailBtn record={record} />
         <RemoveBtn record={record} />

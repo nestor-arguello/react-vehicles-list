@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table } from 'antd';
 import { useStateValue } from '../../globalState';
 import columns from './columns';
+import DetailModal from './DetailModal';
 
 const CarsTable = ({ ...props }) => {
+  const [modalVisible, setModalVisible] = useState(false);
   const [{ cars, actualUserId }] = useStateValue();
-  const carsObject = cars.byIds;
+  const carsObjects = cars.byIds;
 
-  console.log(carsObject['1'].userId);
-
-  const data = Object.keys(carsObject)
+  const data = Object.keys(carsObjects)
     .reduce((cars, id) => {
-      if (carsObject[id].userId === actualUserId) {
-        cars.push(carsObject[id]);
+      if (carsObjects[id].userId === actualUserId) {
+        cars.push(carsObjects[id]);
       }
       return cars;
     }, [])
@@ -37,6 +37,7 @@ const CarsTable = ({ ...props }) => {
 
   return (
     <div>
+      <DetailModal show={showDetail} />
       <Table dataSource={data} columns={columns} />
     </div>
   );

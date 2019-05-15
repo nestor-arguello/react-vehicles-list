@@ -1,4 +1,5 @@
 const initialState = {
+  showDetail: true,
   actualUserId: '1',
   users: {
     allIds: ['1', '2'],
