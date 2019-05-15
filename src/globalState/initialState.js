@@ -1,5 +1,5 @@
 const initialState = {
-  showDetailModal: true,
+  showDetailModal: false,
   actualUserId: '1',
   users: {
     allIds: ['1', '2'],
@@ -28,7 +28,11 @@ const initialState = {
         year: '1950',
         madein: 'Italia',
         maxspeed: '150',
-        active: true
+        active: true,
+        description:
+          'Posee un motor V8 de 3,9 litros, más pequeño en desplazamiento y de más alta potencia que el del 458.',
+        colors: 'Rojo, negro y gris',
+        doors: '2'
       },
       '2': {
         id: '2',
@@ -37,7 +41,11 @@ const initialState = {
         year: '1988',
         madein: 'Alemania',
         maxspeed: '154',
-        active: false
+        active: false,
+        description:
+          'Es impulsado por un motor V10 de 5,7 litros y 612 DIN (605 SAE) caballos de potencia (450 kW).',
+        colors: 'Amarillo, rojo, azul y negro',
+        doors: '2'
       },
       '3': {
         id: '3',
@@ -46,7 +54,11 @@ const initialState = {
         year: '1977',
         madein: 'Japón',
         maxspeed: '120',
-        active: false
+        active: false,
+        description:
+          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
+        colors: 'Gris, azul y negro',
+        doors: '5'
       },
       '4': {
         id: '4',
@@ -55,7 +67,11 @@ const initialState = {
         year: '1972',
         madein: 'USA',
         maxspeed: '110',
-        active: false
+        active: false,
+        description:
+          'Cuatro en línea (I4) Ecotec, de 1796 cc. de cilindraje, LUW.',
+        colors: 'Blanco, negro, azul y rojo',
+        doors: '4'
       }
     }
   }

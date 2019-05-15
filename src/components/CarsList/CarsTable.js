@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 import { useStateValue } from '../../globalState';
-import columns from './columns';
+import listColumns from './listColumns';
 import { getCarsColumnsData } from '../../selectors';
 import DetailModal from './DetailModal';
 
@@ -12,7 +12,7 @@ const CarsTable = ({ ...props }) => {
   return (
     <div>
       <DetailModal show={showDetailModal} />
-      <Table dataSource={data} columns={columns} />
+      <Table dataSource={data} columns={listColumns} />
     </div>
   );
 };

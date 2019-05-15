@@ -4,7 +4,8 @@ import { useStateValue } from '../../globalState';
 import { openDetailModal } from '../../actions';
 
 const DetailBtn = ({ record, ...props }) => {
-  const [state, dispatch] = useStateValue();
+  const dispatch = useStateValue()[1];
+  
   const handleClick = event => {
     event.preventDefault();
     console.log(record);

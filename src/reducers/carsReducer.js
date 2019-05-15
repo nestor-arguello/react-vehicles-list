@@ -1,5 +1,5 @@
 export default (state, action) => {
-  const { type, payload } = action;
+  const { type } = action;
 
   switch (type) {
     default:

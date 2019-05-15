@@ -19,3 +19,7 @@ export const getCarsColumnsData = (carsById, actualUserId) => {
       };
     });
 };
+
+export const getDetailsColumnsData = (cars, id) => {
+
+};
