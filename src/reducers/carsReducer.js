@@ -41,6 +41,7 @@ export default (state, action) => {
       // ***************** ####### **************
       return {
         ...state,
+        allIds: [...state.allIds, newId],
         byId: {
           ...state.byId,
           [newId]: {
