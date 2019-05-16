@@ -18,7 +18,7 @@ const CarsList = () => {
         style={{
           width: '90%',
           maxWidth: 1024,
-          height: 510,
+          height: 630,
           boxShadow:
             '0px 2px 8px 0px rgba(0, 0, 0, 0.1)'
         }}
@@ -42,7 +42,6 @@ const CarsList = () => {
         }
       >
         <CarsTable />
-        {console.log('[CarsList rendered!]')}
       </Card>
     </div>
   );
