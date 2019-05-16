@@ -57,7 +57,11 @@ const CarsTable = ({ ...props }) => {
       >
         <CreateBtn onClick={handleOpenCreateModal} />
       </div>
-      <Table dataSource={data} columns={listColumns} />
+      <Table
+        dataSource={data}
+        columns={listColumns}
+        pagination={{defaultPageSize: 3}}
+      />
     </div>
   );
 };
