@@ -1,4 +1,4 @@
-import { REMOVE_CAR } from '../actionTypes';
+import { REMOVE_CAR, SET_CAR_ACTIVE } from '../actionTypes';
 
 export default (state, action) => {
   const { type, payload } = action;
@@ -18,6 +18,20 @@ export default (state, action) => {
         ...state,
         allIds: newIds,
         byId: newCars
+      }
+    }
+    case SET_CAR_ACTIVE: {
+      const {id, isActive} = payload;
+
+      return {
+        ...state,
+        byId: {
+          ...state.byId,
+          [id]: {
+            ...state.byId[id],
+            active: isActive
+          } 
+        }
       }
     }
     default:

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Checkbox } from 'antd';
 import RemoveBtn from './RemoveBtn';
 import DetailBtn from './DetailBtn';
+import ActiveCarCheckbox from './ActiveCarCheckbox';
 
 const listColumns = [
   {
@@ -28,11 +28,14 @@ const listColumns = [
     title: 'Estado',
     dataIndex: 'active',
     key: 'active',
-    render: active => (
-      <>
-        <span>Activo &nbsp;</span> <Checkbox defaultChecked={active} />
-      </>
-    )
+    render: (active, record) => {
+      return (
+        <>
+          <span>Activo &nbsp;</span>
+          <ActiveCarCheckbox isActive={active} record={record} />
+        </>
+      );
+    }
   },
   {
     title: 'Acciones',
