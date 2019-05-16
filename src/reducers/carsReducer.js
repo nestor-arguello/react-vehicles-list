@@ -1,4 +1,4 @@
-import { REMOVE_CAR, SET_CAR_ACTIVE } from '../actionTypes';
+import { REMOVE_CAR, SET_CAR_ACTIVE, SAVE_CAR } from '../actionTypes';
 
 export default (state, action) => {
   const { type, payload } = action;
@@ -18,10 +18,10 @@ export default (state, action) => {
         ...state,
         allIds: newIds,
         byId: newCars
-      }
+      };
     }
     case SET_CAR_ACTIVE: {
-      const {id, isActive} = payload;
+      const { id, isActive } = payload;
 
       return {
         ...state,
@@ -30,9 +30,27 @@ export default (state, action) => {
           [id]: {
             ...state.byId[id],
             active: isActive
-          } 
+          }
         }
-      }
+      };
+    }
+    case SAVE_CAR: {
+      const { newCar, actualUserId } = payload;
+      // ******* only for internal state management ****
+      const newId = String(state.allIds.length + 100);
+      // ***************** ####### **************
+      return {
+        ...state,
+        byId: {
+          ...state.byId,
+          [newId]: {
+            ...newCar,
+            id: newId,
+            userId: actualUserId,
+            active: false
+          }
+        }
+      }; 
     }
     default:
       return state;

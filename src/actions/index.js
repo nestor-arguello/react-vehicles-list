@@ -5,7 +5,8 @@ import {
   REMOVE_CAR,
   SET_CAR_ACTIVE,
   OPEN_CREATE_MODAL,
-  CLOSE_CREATE_MODAL
+  CLOSE_CREATE_MODAL,
+  SAVE_CAR
 } from '../actionTypes';
 
 export const openDetailModal = () => ({
@@ -26,6 +27,14 @@ export const setActualCarId = id => ({
 export const removeCar = id => ({
   type: REMOVE_CAR,
   payload: id
+});
+
+export const saveCar = (actualUserId, newCar) => ({
+  type: SAVE_CAR,
+  payload: {
+    newCar,
+    actualUserId
+  }
 });
 
 export const setCarActive = (id, isActive) => ({

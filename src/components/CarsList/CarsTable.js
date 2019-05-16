@@ -6,7 +6,7 @@ import { getCarsColumnsData } from '../../selectors';
 import DetailModal from './DetailModal';
 import CreateBtn from './CreateBtn';
 import CreateForm from './CreateForm';
-import { openCreateModal, closeCreateModal } from '../../actions';
+import { openCreateModal, closeCreateModal, saveCar } from '../../actions';
 
 const CarsTable = ({ ...props }) => {
   const [
@@ -34,7 +34,8 @@ const CarsTable = ({ ...props }) => {
 
       console.log('Received values of form: ', values);
       form.resetFields();
-      // this.setState({ visible: false });
+      dispatch(saveCar(actualUserId, values));
+      dispatch(closeCreateModal());      
     });
   };
 
