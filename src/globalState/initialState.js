@@ -1,4 +1,5 @@
 const initialState = {
+  showCreateModal: false,
   showDetailModal: false,
   actualCarId: null,
   actualUserId: '1',
