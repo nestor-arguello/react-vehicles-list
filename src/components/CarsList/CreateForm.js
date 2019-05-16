@@ -1,43 +1,92 @@
-import React from 'react';
-import { Modal, Form, Input, Radio } from 'antd';
+import React, { Component } from 'react';
+import { Modal, Form, Input } from 'antd';
 
 const CreateForm = Form.create({ name: 'form_in_modal' })(
-  class extends React.Component {
+  class extends Component {
     render() {
       const { visible, onCancel, onCreate, form } = this.props;
       const { getFieldDecorator } = form;
       return (
         <Modal
           visible={visible}
-          title="Create a new collection"
-          okText="Create"
+          title="Crear vehículo nuevo"
+          okText="Guardar"
+          cancelText="Cancelar"
           onCancel={onCancel}
           onOk={onCreate}
         >
           <Form layout="vertical">
-            <Form.Item label="Title">
-              {getFieldDecorator('title', {
+            <Form.Item label="Marca">
+              {getFieldDecorator('brand', {
                 rules: [
                   {
                     required: true,
-                    message: 'Please input the title of collection!'
+                    message: 'Campo obligatorio'
                   }
                 ]
               })(<Input />)}
             </Form.Item>
-            <Form.Item label="Description">
-              {getFieldDecorator('description')(<Input type="textarea" />)}
+            <Form.Item label="Año de fabrición">
+              {getFieldDecorator('year', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
             </Form.Item>
-            <Form.Item className="collection-create-form_last-form-item">
-              {getFieldDecorator('modifier', {
-                initialValue: 'public'
-              })(
-                <Radio.Group>
-                  <Radio value="public">Public</Radio>
-                  <Radio value="private">Private</Radio>
-                </Radio.Group>
-              )}
+            <Form.Item label="Origen (País)">
+              {getFieldDecorator('madein', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
             </Form.Item>
+            <Form.Item label="Velocidad máxima">
+              {getFieldDecorator('maxspeed', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
+            </Form.Item>
+            <Form.Item label="Descripción">
+              {getFieldDecorator('description', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
+            </Form.Item>
+            <Form.Item label="Colores disponibles">
+              {getFieldDecorator('colors', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
+            </Form.Item>
+            <Form.Item label="Cantidad de puertas">
+              {getFieldDecorator('doors', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Campo obligatorio'
+                  }
+                ]
+              })(<Input />)}
+            </Form.Item>
+            
           </Form>
         </Modal>
       );
@@ -51,8 +100,6 @@ export default CreateForm;
 //   state = {
 //     visible: false
 //   };
-
-  
 
 //   render() {
 //     return (

@@ -1,17 +1,22 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { Table } from 'antd';
 import { useStateValue } from '../../globalState';
 import listColumns from './listColumns';
 import { getCarsColumnsData } from '../../selectors';
 import DetailModal from './DetailModal';
 import CreateBtn from './CreateBtn';
-import CreateForm from './CreateForm'
+import CreateForm from './CreateForm';
 import { openCreateModal, closeCreateModal } from '../../actions';
 
 const CarsTable = ({ ...props }) => {
-  const [{ cars, actualUserId, showDetailModal, showCreateModal }, dispatch] = useStateValue();
+  const [
+    { cars, actualUserId, showDetailModal, showCreateModal },
+    dispatch
+  ] = useStateValue();
   const data = getCarsColumnsData(cars.byId, actualUserId);
 
+  const saveFormRef = useRef(null);
+  
   const handleOpenCreateModal = () => {
     dispatch(openCreateModal());
   };
@@ -19,8 +24,6 @@ const CarsTable = ({ ...props }) => {
   const handleCancel = () => {
     dispatch(closeCreateModal());
   };
-
-  const saveFormRef = useRef(null);
 
   const handleCreate = () => {
     const form = saveFormRef.current.props.form;
@@ -35,10 +38,8 @@ const CarsTable = ({ ...props }) => {
     });
   };
 
-
   return (
     <div>
-      {console.log(saveFormRef)}
       <DetailModal show={showDetailModal} />
       <CreateForm
         wrappedComponentRef={saveFormRef}
