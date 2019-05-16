@@ -60,7 +60,8 @@ const CarsTable = ({ ...props }) => {
       <Table
         dataSource={data}
         columns={listColumns}
-        pagination={{defaultPageSize: 3}}
+        pagination={{ defaultPageSize: 5 }}
+        scroll={{ x: 700, y:350 }}
       />
     </div>
   );

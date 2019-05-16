@@ -21,7 +21,7 @@ const initialState = {
     }
   },
   cars: {
-    allIds: ['1', '2', '3', '4'],
+    allIds: ['1', '2', '3', '4', '7', '8', '9'],
     byId: {
       '1': {
         id: '1',
@@ -51,6 +51,45 @@ const initialState = {
       },
       '3': {
         id: '3',
+        userId: '1',
+        brand: 'Subaru',
+        year: '1977',
+        madein: 'Japón',
+        maxspeed: '120',
+        active: false,
+        description:
+          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
+        colors: 'Gris, azul y negro',
+        doors: '5'
+      },
+      '7': {
+        id: '7',
+        userId: '1',
+        brand: 'Subaru',
+        year: '1977',
+        madein: 'Japón',
+        maxspeed: '120',
+        active: false,
+        description:
+          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
+        colors: 'Gris, azul y negro',
+        doors: '5'
+      },
+      '8': {
+        id: '8',
+        userId: '1',
+        brand: 'Subaru',
+        year: '1977',
+        madein: 'Japón',
+        maxspeed: '120',
+        active: false,
+        description:
+          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
+        colors: 'Gris, azul y negro',
+        doors: '5'
+      },
+      '9': {
+        id: '9',
         userId: '1',
         brand: 'Subaru',
         year: '1977',
