@@ -2,7 +2,7 @@ import React from 'react';
 import './detailModal.css';
 import { useStateValue } from '../../globalState/';
 import { Modal } from 'antd';
-import { closeDetailModal } from '../../actions';
+import { closeDetailModal, setActualCarId } from '../../actions';
 import { Table } from 'antd';
 import detailColumns from './detailColumns'
 import { getDetailsColumnsData } from '../../selectors';
@@ -11,10 +11,11 @@ const DetailModal = ({ show, ...props }) => {
   const [state, dispatch] = useStateValue();
   const {cars, actualCarId} = state;
 
-  const data = getDetailsColumnsData(cars.byId, actualCarId);
+  const data = cars && cars.byId ? getDetailsColumnsData(cars.byId, actualCarId) : null;
 
   const handleClose = event => {
     event.preventDefault();
+    dispatch(setActualCarId(null))
     dispatch(closeDetailModal());
   };
 

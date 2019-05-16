@@ -1,6 +1,6 @@
 const initialState = {
   showDetailModal: false,
-  actualCarId: 2,
+  actualCarId: null,
   actualUserId: '1',
   users: {
     allIds: ['1', '2'],
