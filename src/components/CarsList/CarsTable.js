@@ -32,7 +32,6 @@ const CarsTable = ({ ...props }) => {
         return;
       }
 
-      console.log('Received values of form: ', values);
       form.resetFields();
       dispatch(saveCar(actualUserId, values));
       dispatch(closeCreateModal());      

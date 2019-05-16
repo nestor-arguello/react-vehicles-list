@@ -1,4 +1,5 @@
 import {
+  SET_ACTUAL_USER_ID,
   OPEN_DETAIL_MODAL,
   CLOSE_DETAIL_MODAL,
   SET_ACTUAL_CAR_ID,
@@ -8,6 +9,11 @@ import {
   CLOSE_CREATE_MODAL,
   SAVE_CAR
 } from '../actionTypes';
+
+export const setActualUserId = id => ({
+  type: SET_ACTUAL_USER_ID,
+  payload: id
+});
 
 export const openDetailModal = () => ({
   type: OPEN_DETAIL_MODAL,

@@ -1,3 +1,9 @@
+export const getUsersById = users => {
+  return users.allIds.map(id => {
+    return users.byId[id];
+  });
+};
+
 export const getCarsColumnsData = (carsById, actualUserId) => {
   return Object.keys(carsById)
     .reduce((cars, id) => {
@@ -33,17 +39,19 @@ export const getDetailsColumnsData = (carsById, carId) => {
       colors,
       doors
     } = carsById[carId];
-    
-    return [{
-      key: id,
-      brand,
-      year,
-      madein,
-      maxspeed,
-      active,
-      description,
-      colors,
-      doors
-    }];
+
+    return [
+      {
+        key: id,
+        brand,
+        year,
+        madein,
+        maxspeed,
+        active,
+        description,
+        colors,
+        doors
+      }
+    ];
   }
 };
