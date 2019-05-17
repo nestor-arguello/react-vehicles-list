@@ -40,8 +40,6 @@ const listColumns = [
   {
     title: 'Acciones',
     key: 'action',
-    fixed: 'right',
-    width: 245,
     render: (text, record) => (
       <span>
         <DetailBtn record={record} />

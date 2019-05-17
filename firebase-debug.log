@@ -1,0 +1,49 @@
+[debug] [2019-05-17T15:56:32.342Z] ----------------------------------------------------------------------
+[debug] [2019-05-17T15:56:32.344Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2019-05-17T15:56:32.344Z] CLI Version:   6.9.2
+[debug] [2019-05-17T15:56:32.345Z] Platform:      linux
+[debug] [2019-05-17T15:56:32.345Z] Node Version:  v10.15.3
+[debug] [2019-05-17T15:56:32.345Z] Time:          Fri May 17 2019 11:56:32 GMT-0400 (GMT-04:00)
+[debug] [2019-05-17T15:56:32.345Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-17T15:56:32.404Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-17T15:56:32.404Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/narguello/code_lab/phinx-tp-nestor
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, skipping
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2019-05-17T15:56:56.627Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2019-05-17T15:56:57.621Z] <<< HTTP RESPONSE 200
+[info] i  Skipping write of build/index.html
+[info] 
+[info] i  Writing configuration info to firebase.json...
+[info] i  Writing project information to .firebaserc...
+[info] 
+[info] ✔  Firebase initialization complete!

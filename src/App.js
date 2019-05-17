@@ -34,44 +34,12 @@ const App = () => {
       if (user.username === username && user.password === password) {
         setIsLogged(true);
         dispatch(setActualUserId(user.id));
-        // setNotMatched(null);
         return true;
       }
       setNotMatched(true);
       return false;
     });
   };
-
-  // useEffect(() => {
-  //   const usersRef = firebase.database().ref('users');
-  //   usersRef.on('value', (snapshot) => {
-  //     let usersSnapshot = snapshot.val();
-
-  //     const setUsersRef = users => {
-  //       return {
-  //         type: 'SET_USER_FROM_REF',
-  //         payload: users
-  //       };
-  //     }
-  //     dispatch(setUsersRef(usersSnapshot));
-
-  //   })
-
-  //   const carsRef = firebase.database().ref('cars');
-  //   carsRef.on('value', (snapshot) => {
-  //     let carsSnapshot = snapshot.val();
-
-  //     const setCarsRef = cars => {
-  //       return {
-  //         type: 'SET_CAR_FROM_REF',
-  //         payload: cars
-  //       };
-  //     }
-  //     dispatch(setCarsRef(carsSnapshot));
-  //   })
-
-  //   console.log(users, cars)
-  // }, [users, cars])
 
   return isLogged ? (
     <CarList />
