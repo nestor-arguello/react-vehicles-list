@@ -2,7 +2,7 @@ const initialState = {
   showCreateModal: false,
   showDetailModal: false,
   actualCarId: null,
-  actualUserId: '1',
+  actualUserId: null,
   users: {
     allIds: ['1', '2'],
     byId: {
@@ -65,41 +65,41 @@ const initialState = {
       '7': {
         id: '7',
         userId: '1',
-        brand: 'Subaru',
-        year: '1977',
-        madein: 'Japón',
-        maxspeed: '120',
+        brand: 'Ford',
+        year: '1960',
+        madein: 'USA',
+        maxspeed: '140',
         active: false,
         description:
-          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
-        colors: 'Gris, azul y negro',
+          'Los motores disponibles eran los ya conocidos SEFI de 1.9 Litros.',
+        colors: 'Gris, amarillo, rojo y negro',
         doors: '5'
       },
       '8': {
         id: '8',
         userId: '1',
-        brand: 'Subaru',
-        year: '1977',
-        madein: 'Japón',
-        maxspeed: '120',
+        brand: 'Fiat',
+        year: '1969',
+        madein: 'Italia',
+        maxspeed: '85',
         active: false,
         description:
-          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
-        colors: 'Gris, azul y negro',
-        doors: '5'
+          'Los motores disponibles seguirán siendo los bicombustibles 1.0 8v FIRE, 1.4 8v FIRE de 107cv.',
+        colors: 'Dorado, azul, rojo y amarillo',
+        doors: '3'
       },
       '9': {
         id: '9',
         userId: '1',
-        brand: 'Subaru',
-        year: '1977',
-        madein: 'Japón',
-        maxspeed: '120',
+        brand: 'Chrysler',
+        year: '1980',
+        madein: 'USA',
+        maxspeed: '110',
         active: false,
         description:
-          '2.0 FB20 atmosférico 150cv y FB25 atmosférico ambos con cambio manual de 6 marchas o CVT.',
-        colors: 'Gris, azul y negro',
-        doors: '5'
+          'Motor 1.4L de 95 caballos de fuerza y 94 pies por libra de torque con trasmisión manual.',
+        colors: 'Rojo, verde, negro',
+        doors: '4'
       },
       '4': {
         id: '4',

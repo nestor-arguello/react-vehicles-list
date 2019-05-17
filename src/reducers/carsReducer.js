@@ -4,6 +4,9 @@ export default (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    case 'SET_CAR_FROM_REF': {
+      return payload;
+    }
     case REMOVE_CAR: {
       const newIds = state.allIds.filter(id => {
         return id !== payload;
@@ -51,7 +54,7 @@ export default (state, action) => {
             active: false
           }
         }
-      }; 
+      };
     }
     default:
       return state;

@@ -1,0 +1,39 @@
+{
+  "users": {
+    "allIds": [
+      "1",
+      "2"
+    ],
+    "byId": {
+      "1": {
+        "id": "1",
+        "username": "nes",
+        "password": "123"
+      },
+      "2": {
+        "id": "2",
+        "username": "leia",
+        "password": "123"
+      }
+    }
+  },
+  "cars": {
+    "allIds": [
+      "1"
+    ],
+    "byId": {
+      "1": {
+        "id": "1",
+        "userId": "1",
+        "brand": "Ferrari",
+        "year": "1950",
+        "madein": "Italia",
+        "maxspeed": "150",
+        "active": true,
+        "description": "Posee un motor V8 de 3, 9 litros, más pequeño en desplazamiento y de más alta potencia que el del 458.",
+        "colors": "Rojo, negro y gris",
+        "doors": "2"
+      }
+    }
+  }
+}

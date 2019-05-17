@@ -12,6 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <StateProvider reducer={mainReducer} initialState={initialState}>
+    {/* {console.log(initialState)} */}
     <App />
   </StateProvider>,
   document.getElementById('root')
