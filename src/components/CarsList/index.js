@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/logo-phinx-cool.svg';
+import logo from '../../images/20170420_React_logo_wordmark.png';
 import { Card } from 'antd';
 import CarsTable from './CarsTable';
 
