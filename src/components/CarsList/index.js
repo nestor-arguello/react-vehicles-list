@@ -2,11 +2,13 @@ import React from 'react';
 import logo from '../../images/20170420_React_logo_wordmark.png';
 import { Card } from 'antd';
 import CarsTable from './CarsTable';
+import BackPortfolioBtn from '../back-portfolio-btn/back-portfolio-btn.component';
 
 const CarsList = () => {
   return (
     <div
       style={{
+        position: 'relative',
         display: 'flex',
         width: '100vw',
         height: '100vh',
@@ -14,6 +16,7 @@ const CarsList = () => {
         alignItems: 'center'
       }}
     >
+      <BackPortfolioBtn />
       <Card
         style={{
           width: '90%',
