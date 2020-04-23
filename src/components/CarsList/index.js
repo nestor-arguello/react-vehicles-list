@@ -10,38 +10,23 @@ const CarsList = () => {
       style={{
         position: 'relative',
         display: 'flex',
-        width: '100vw',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
-      <BackPortfolioBtn />
       <Card
         style={{
-          width: '90%',
-          maxWidth: 1024,
-          height: 630,
-          boxShadow:
-            '0px 2px 8px 0px rgba(0, 0, 0, 0.1)'
+          height: '100%',
+          boxShadow: '0px 2px 8px 0px rgba(0, 0, 0, 0.1)',
+          margin: '0 auto',
+          width: '100%'
         }}
         extra={
-          <img
-            alt="example"
-            src={logo}
-            style={{ height: 40, width: 120 }}
-          />
+          <div style={{ display: 'flex' }}>
+            <img alt="example" src={logo} style={{ height: 40, width: 120 }} />
+          </div>
         }
         title={
-          <h3
-            style={{
-              margin: 0,
-              padding: 0,
-              fontWeight: '600'
-            }}
-          >
-            Listado de Vehículos
-          </h3>
+          <BackPortfolioBtn />
         }
       >
         <CarsTable />

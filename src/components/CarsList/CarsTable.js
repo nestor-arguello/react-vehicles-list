@@ -51,7 +51,7 @@ const CarsTable = ({ ...props }) => {
         style={{
           display: 'flex',
           justifyContent: 'flex-end',
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
         <CreateBtn onClick={handleOpenCreateModal} />
@@ -60,6 +60,10 @@ const CarsTable = ({ ...props }) => {
         dataSource={data}
         columns={listColumns}
         pagination={{ defaultPageSize: 4 }}
+        size="small"
+        scroll={{
+          x: 700,
+        }}
       />
     </div>
   );
